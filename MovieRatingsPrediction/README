@@ -1,0 +1,47 @@
+#########################################
+#####       Ybarra Magtoto          #####
+#####          Meng Zhou            #####
+#####   CS596 - Machine Learning    #####
+#####          Fall 2016            #####
+#####       Dr. Xiaobai Liu         #####
+##### Final Project - Movie Ratings #####
+#########################################
+
+* Important: This program is designed to be run on Windows.
+
+This program runs on the dataset downloaded from 
+http://grouplens.org/datasets/movielens/100k/
+Please refer to README_DATASET for detailed information
+
+In this project, we created excel spreadsheets using u.data and u.user from 
+which we then generated a data.mat file to simplified the work that needs
+to be done with data processing in MATLAB.
+
+We used the opensource libsvm over MATLAB's built-in library because we have
+found that libsvm has a good performance and we would like to learn how to
+work with a third-party library. 
+As a result, please be advised, this program only runs on Microsoft Windows. 
+It will not work on MATLAB on other platforms.
+
+In our original "movie" structure, each movie.data contains the information
+of each user who has rated this movie already as well as her/his ratings
+on this movie. 
+
+Both regression and classification training and testing were performed.
+However, this should be a regression problem. We performed classification
+to make comparisons and see how good our models project.
+
+After running the main driver program, the struct will have additional
+fields storing the training and testing results for both regression
+and classification. 
+
+The function that does regression/classification training and testing is the
+libsvm_regression.m/libsvm_classify.m file. 
+
+The cgtest.m file is used to compute the optimal c and g values for each model.
+
+There are 4 files used to make libsvm work on Windows:
+    1. The buffer file 'allbut.pl'
+    2. The script file 'mku.sh'
+    3. 'svmtrain.mexw64'
+    4. 'svmpredict.mexw64'
